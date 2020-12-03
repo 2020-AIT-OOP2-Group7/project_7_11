@@ -9,7 +9,7 @@ def index():
     return render_template("index.html")
 
 # アップロード画像の表示
-@app.route('/upload_image')
+@app.route('/upload_image', methods=["POST"])
 def upload_image():
     # アップロード画像の表示画面のテンプレートを呼び出し
     return render_template('upload_image.html')
