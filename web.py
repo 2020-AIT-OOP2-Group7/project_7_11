@@ -8,6 +8,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+# アップロード画像の表示
+@app.route('/upload_image')
+def upload_image():
+    # アップロード画像の表示画面のテンプレートを呼び出し
+    return render_template('upload_image.html')
 
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
